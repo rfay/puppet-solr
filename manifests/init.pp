@@ -1,9 +1,7 @@
 # == Class: solr
 #
 # This module helps you create a multi-core solr install
-# from scratch. I'm packaging a version of solr in the files
-# directory for convenience. You can replace it with a newer
-# version if you like.
+# from scratch.
 #
 # IMPORTANT: Works only with Ubuntu as of now. Other platform
 # support is most welcome.

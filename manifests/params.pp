@@ -7,9 +7,10 @@
 #
 class solr::params {
 
-  $jetty_home = '/usr/share/jetty'
+  # /usr/share/jetty6 is the location on RHEL
+  $jetty_home = '/usr/share/jetty6'
   $solr_home = '/usr/share/solr'
-  $solr_version = '4.4.0'
+  $solr_version = '4.7.1'
   $cores = ['default']
 
 }

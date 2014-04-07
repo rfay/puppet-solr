@@ -7,19 +7,18 @@
 #
 class solr::install {
 
-  package { 'default-jdk':
-    ensure  => present,
-  }
-
   package { 'jetty':
+    name => 'jetty6',  # Make this work dependent on OS
     ensure  => present,
-    require => Package['default-jdk'],
+    require => Class['java'],
+
   }
 
-  package { 'libjetty-extra':
-    ensure  => present,
-    require => Package['jetty'],
-  }
+  # libjetty-extra doesn't exist on RHEL
+#  package { 'libjetty-extra':
+#    ensure  => present,
+#    require => Package['jetty'],
+#  }
 
   package { 'wget':
     ensure  => present,
